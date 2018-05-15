@@ -37,7 +37,7 @@ for i in range (0, 10000):
 print "Program finished executing."
 ```
 
-After doing a bit of reading, I found that I could speed up the requests significantly by transmitting every possible combination to the server at once, rather than one request at a time. To do so, I made a file named `dictgen.sh` containing the following script:
+After doing a bit of reading, I found that I could speed up the requests significantly by transmitting every possible combination to the server at once, rather than one request at a time. To do so, I made a file named `dictgen.sh` containing the following script and ran it:
 ```bash
 #!/bin/bash
 PASS='UoMYTrfrBFHyQXmg6gzctqAwOmw1IohZ'

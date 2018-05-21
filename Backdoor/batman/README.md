@@ -1,0 +1,1 @@
+I'll be honest, I have no idea how one was initially meant to find the flag outside of random guessing. That said, I found it pretty quickly playing with the php queries on the site that would show items. 

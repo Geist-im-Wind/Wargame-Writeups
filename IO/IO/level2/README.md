@@ -1,5 +1,3 @@
-NOT YET DONE
-
 Before even running the level02 executable, I took a look at the source code they supply for it.
 
 ```c
@@ -33,20 +31,10 @@ This code seems to give us the euid we want only if the arguments are exactly 3 
 
 Our only chance to do this seems to be in `abs(atoi(argv[1])) / atoi(argv[2])`.
 
-I made some C code on my end to test my understanding of this
+A division by zero will simply get us to return 1, ending the function immediately. This means we need to find a way to cause a SIGFPE without the second argument being zero.
 
-```c
-#include <stdio.h>
+What I ended up finding in my research was [this StackOverflow](https://stackoverflow.com/questions/46378104/why-does-integer-division-by-1-negative-one-result-in-fpe/46378352).
 
-int main(int argc, char **argv)
-{
-        printf("%d, \n", argc, !atoi(argv[2]));
-        if (argc != 3 || !atoi(argv[2]))
-            printf("Failed\n");
-            return 1;
-        printf("Passed parameters.\n");
-        printf("%s \n", abs(atoi(argv[1])) / atoi(argv[2]));
-}
-```
+All we need to do to cause the SIGFPE is take the absolute minimum value of the int datatype minus 1 and make sure it is divided by -1. The command I used was `./level02 -2147483648 -1`.
 
-My inclination was that simply doing `./level02 1 0` would work, as that would satisfy the SIGFPE. I found that this was not the case, however, as this causes a SIGSEGV, or a Segmentation Fault. This is likely from a null value being passed into `atoi`.
+Password: OlhCmdZKbuzqngfz

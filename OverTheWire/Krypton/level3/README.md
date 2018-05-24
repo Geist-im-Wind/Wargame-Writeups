@@ -1,4 +1,4 @@
-In progress. Trying to create a python script to do cryptoanalysis via a dictionary followed by attempting to hack the plaintext files is a pain in the ass with how slow the Kryton server is being for me.
+NOT COMPLETE
 
 Level Info: "Well done. You’ve moved past an easy substitution cipher.
 
@@ -27,7 +27,7 @@ with open(sys.argv[1], "r") as f:
                 print encrypted.translate(tr) + "\n"
 ```
 
-With it mentioning that the text being in English was key, I did some research and found documentation on cryptoanalysis for simple substitution ciphers. With that in mind, making a program to automatically break the cipher was not difficult.
+With it mentioning that the text being in English was key, I did some research and found documentation on cryptoanalysis for simple substitution ciphers.
 
 ```python
 

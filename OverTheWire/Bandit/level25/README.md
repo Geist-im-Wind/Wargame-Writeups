@@ -37,4 +37,4 @@ So, I went back to puzzling over the initial "shell" we have to deal with. The o
 
 You just make your terminal tiny. Log into bandit26 like that, and `more` will not quit until you make the terminal large enough to see the whole ASCII art. From there, `more` allows one to press v to open vi inside it. You can read the password by running an edit on it with `:e /etc/bandit_pass/bandit26`.
 
-Password: 55czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z
+Password: 5czgV9L3Xx8JPOyRbXh6lQbmIOWvPT6Z

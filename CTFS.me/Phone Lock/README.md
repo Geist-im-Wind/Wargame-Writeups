@@ -1,0 +1,1 @@
+I don't even know if this warrants being considered a web exploitation challenge, but it took about 30 seconds to complete. It literally just has a counter that tells you the amount of digits you have correct so far on the lock. Move them around one by one until you get each integer you want, and you're done.
